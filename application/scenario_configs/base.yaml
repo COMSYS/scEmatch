@@ -1,0 +1,60 @@
+defaults:
+  - _self_
+  - scenario: example
+
+datasets_precomputed: # Updated dynamically.
+
+eval:
+  artifacts_base: artifacts/
+
+mode: homomorphic
+run: 1
+
+scmap:
+  threshold: 0.3
+  cluster_level_threshold: 0.3 # Used to determine cluster-level matches
+  extra_thresholds: # Extra cell-level thresholds
+    - 0.0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    - 0.7
+    - 0.8
+    - 0.9
+
+client1:
+  name: "c1"
+  write_dir: "sent_data/c1"
+
+client2:
+  name: "c2"
+  write_dir: "sent_data/c2"
+
+aggregation_server:
+  name: "agg_server"
+  write_dir: "sent_data/agg_server"
+
+# Mapping Server
+similarity_server:
+  name: "sim_server"
+  write_dir: "sent_data/sim_server"
+
+# Homomorphic encryption parameters
+he_params:
+  n_exp: 13
+  scale_exp: 49
+  outer_prime_size: 60
+  qi_sizes:
+    - 60
+    - 49
+    - 49
+    - 60
+
+benchmark:
+ skip_existing_runs: True
+ omit_saving_similarity_scores: True
+ omit_saving_cell_level_matches: False
+ omit_saving_cluster_level_matches: False

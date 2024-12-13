@@ -1,0 +1,17 @@
+#@package _global_
+scenario_identifier: 'example'
+mode: homomorphic  # simple, for plaintext variant
+
+dataset:
+  selected_features: feature_aligned_datasets/example/ns_forest/selected_features
+  dataset_config: feature_aligned_datasets/example/ns_forest/config.yaml
+  client1_ref_data_file: feature_aligned_datasets/example/ns_forest/d1.h5ad
+  client2_ref_data_file: feature_aligned_datasets/example/ns_forest/d2.h5ad
+  client1_query_data_file: feature_aligned_datasets/example/ns_forest/d1_aligned.h5ad
+  client2_query_data_file: feature_aligned_datasets/example/ns_forest/d2_aligned.h5ad
+  cluster_type_key_1: cell_type # key for litvinukova dataset
+  cluster_type_key_2: cell_type_leiden0.6 # key for chaffin dataset
+  feature_selection: ns_forest
+
+  client1_cell_counts: -1 # -1 use all cells
+  client2_cell_counts: -1 # -1 use all cells
