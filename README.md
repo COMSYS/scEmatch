@@ -63,9 +63,12 @@ Results will be saved in `application/artifacts/`.
 @inproceedings{lohmoeller24scematch,
  address = {Sanya, China},
  author = {Johannes Lohmöller and Jannis Scheiber and Rafael Kramann and Klaus Wehrle and Sikander Hayat and Jan Pennekamp},
- booktitle = {23rd IEEE International Conference on Trust, Security and Privacy in Computing and Communications 2024 (TrustCom-2024)},
+ booktitle = {23rd IEEE International Conference on Trust, Security and Privacy in Computing and Communications 2024 (TrustCom '2024)},
  month = {December},
  title = {scE(match): Privacy-Preserving Cluster Matching of Single-Cell Data},
- year = {2024}
+ year = {2024},
+ doi = {10.1109/TrustCom63139.2024.00294},
+ code = {https://github.com/COMSYS/scEmatch},
+ abstract = {Advances in single-cell RNA sequencing (scRNA-seq) have dramatically enhanced our understanding of cellular functions and disease mechanisms. Despite its potential, scRNA-seq faces significant challenges related to data privacy, cost, and Intellectual Property (IP) protection, which hinder the sharing and collaborative use of these sensitive datasets. In this paper, we introduce a novel method, scE(match), a privacy-preserving tool that facilitates the matching of single-cell clusters between different datasets by relying on scmap as an established projection tool, but without compromising data privacy or IP. scE(match) utilizes homomorphic encryption to ensure that data and unique cell clusters remain confidential while enabling the identification of overlapping cell types for further collaboration and downstream analysis. Our evaluation shows that scE(match) performantly matches cell types across datasets with high precision, addressing both practical and ethical concerns in sharing scRNA-seq data. This approach not only supports secure data collaboration but also fosters advances in biomedical research by reliably protecting sensitive information and IP rights.}
 }
 ```
